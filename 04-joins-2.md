@@ -72,6 +72,28 @@ ON f.language_id = l1.language_id
 JOIN language l2
 ON f.original_language_id = l2.language_id;
 ```
+Input Table: film
+id	name	year	rental
+1	Film A	2020	2.00
+2	Film B	2021	3.00
+3	Film C	2019	1.50
+4	Film D	2022	2.50
+5	Film E	2023	4.00
+6	Film F	2021	2.75
+7	Film G	2018	1.80
+
+Expected Output Table
+Now, let’s see what the output will look like based on your query:
+
+Film1_Name	Film2_Name
+Film A	Film B
+Film A	Film F
+Film B	Film D
+Film B	Film E
+Film C	Film B
+Film C	Film F
+Film D	Film E
+Film F	Film E
 
 Let's see how this might work in terms of pseudocode:
 
